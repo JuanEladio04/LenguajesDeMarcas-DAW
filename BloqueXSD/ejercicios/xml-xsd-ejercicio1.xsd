@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumno" type="datos"/>
+  <xs:complexType name="datos">
+    <xs:sequence>
+        <xs:element name="nombre"></xs:element>
+        <xs:element name="direccion">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="calle"></xs:element>
+                    <xs:element name="numero"></xs:element>
+                    <xs:element name="ciudad"></xs:element>
+                    <xs:element name="provincia"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="telefono"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="dni" type="xs:string"></xs:attribute>
+  </xs:complexType>
+</xs:schema>

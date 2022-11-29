@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE artistas_canciones_y_nacionalidades SYSTEM "artistas_canciones_y_nacionalidades.dtd">
+<artistas_canciones_y_nacionalidades>
+	<artistas>
+		<artista nombre="Queen" fechaNacimiento="13/3/1960" nacionalidad="UK" discografica="Sony"></artista>
+		<artista nombre="Sabina" fechaNacimiento="15/5/2010" nacionalidad="ES UK"></artista>
+		<artista nombre="MJackson" fechaNacimiento="15/5/2010" nacionalidad="ES UK"></artista>
+	</artistas>
+	<canciones>
+		<cancion nombre="We'll rock you" duracion="5:00" artista="Queen"></cancion>
+		<cancion nombre="El bulevard de los sueños rotos" duracion="4:00" artista="Sabina"></cancion>
+	</canciones>
+	<nacionalidades>
+		<nacionalidad codigo="ES" nombre="España"></nacionalidad>
+		<nacionalidad codigo="UK" nombre="Reino Unido"></nacionalidad>
+	</nacionalidades>
+</artistas_canciones_y_nacionalidades>

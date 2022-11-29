@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Minecraft SYSTEM "Minecraft.dtd">
+
+<Minecraft creador="Notch">
+    <UnJugador>
+        <Mundo>
+            <Bloque destruible="si" nombre="cesped">
+                Cuadrado
+            </Bloque>
+            <Bloque destruible="no" nombre="nube">
+                <Flotante/>
+            </Bloque>
+            <Bloque destruible="si" nombre="mena">
+                <Mineral destruible="si" nombre="diamante" pertecece="mena">
+                    Valioso
+                </Mineral>
+            </Bloque>
+            <Agua destruible="no" nombre="agua" pertecece="nube">
+
+            </Agua>
+        </Mundo>
+    </UnJugador>
+
+    <DosJugadores>
+        <Multijugador/>
+    </DosJugadores>
+    
+</Minecraft>

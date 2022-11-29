@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="factura" type="datos"/>
+
+  <xs:complexType name="datos">
+    <xs:sequence>
+      <xs:element name="datos_empresa" type="d_empresa"></xs:element>
+      <xs:element name="datos_cliente" type="d_cliente"></xs:element>
+      <xs:element name="datos_factura" type="d_factura"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="n_fac" type="codigo"/>
+  </xs:complexType>
+
+  <xs:complexType name="d_empresa">
+    <xs:sequence>
+      <xs:element name="nombre"></xs:element>
+      <xs:element name="poblacion"></xs:element>
+      <xs:element name="provincia"></xs:element>
+      <xs:element name="dir"></xs:element>
+      <xs:element name="cif"></xs:element>
+      <xs:element name="telefono"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="d_cliente">
+    <xs:sequence>
+      <xs:element name="nombre"></xs:element>
+      <xs:element name="poblacion"></xs:element>
+      <xs:element name="provincia"></xs:element>
+      <xs:element name="dir_env"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="n_cli" type="codigo"> </xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="codigo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{1}[\d]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="d_factura">
+    <xs:sequence>
+      <xs:element name="fecha"></xs:element>
+      <xs:element name="linea" maxOccurs="unbounded" type="line"></xs:element>
+      <xs:element name="base"></xs:element>
+      <xs:element name="cuota_iva"></xs:element>
+      <xs:element name="total"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="n_ped" type="codigo"/>
+    <xs:attribute name="iva" type="iva"/>
+    <xs:attribute name="f_pago" type="forma_pago"/>
+    <xs:attribute name="moneda" type="coin"/>
+  </xs:complexType>
+
+  <xs:simpleType name="iva">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="10"/>
+      <xs:maxInclusive value="20"/>
+  </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="forma_pago">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="efectivo"/>
+      <xs:enumeration value="targeta"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="coin">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="euro"/>
+      <xs:enumeration value="dolares"/>
+      <xs:enumeration value="pesos mexicanos"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="line">
+    <xs:sequence>
+      <xs:element name="ref"/>
+      <xs:element name="desc"/>
+      <xs:element name="cant"/>
+      <xs:element name="precio"/>
+      <xs:element name="importe"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

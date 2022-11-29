@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="usuario" type="tipoUsurio"/>
+
+	<xs:complexType name="tipoUsurio">
+		<xs:sequence>
+			<xs:element name="ultimasSesiones" type="tipoSesiones"/>
+			<xs:element name="marcadores" type="tipoMarcadores"/>
+			<xs:element name="mensajes"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoSesiones">
+		<xs:sequence>
+			<xs:element name="sesion" type="session" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="session" mixed="true">
+		<xs:sequence>
+			<xs:element name="dispositivo" minOccurs="0" type="device"/>
+		</xs:sequence>
+		<xs:attribute name="fecha" type="date"/>
+		<xs:attribute name="hora" type="hour"/>
+	</xs:complexType>
+
+	<xs:complexType name="device">
+		<xs:attribute name="ip" type="tipoIp"/>
+		<xs:attribute name="navegador" type="xs:string"/>
+		<xs:attribute name="NAT" type="tipoNAT"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoIp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\d]{0-3}[.][\d]{0-3}[.][\d]{0-3}[.][\d]{0-3}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="tipoNAT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="si"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="date">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\d]{4}[-][\d]{2}[-][\d]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="hour">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\d]{2}[:][\d]{+}"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+<!-- 
+
+
+-->
+	<xs:complexType name="tipoMarcadores">
+		<xs:sequence>
+			<xs:element name="marcador" maxOccurs="unbounded">
+				<xs:complexType mixed="true">
+					<xs:attribute name="nombre" type="tipoMarc"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>

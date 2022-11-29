@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tiendaMascotas" type="tipoTienda"/>
+
+    <xs:complexType name="tipoTienda">
+      <xs:sequence>
+        <xs:element name="reptiles" type="tipoReptiles"/>
+        <xs:element name="mamiferos" type="typeMamiferos"/>
+        <xs:element name="unidadesMedida"/>
+        <xs:element name="direccion"/>
+        <xs:element name="clientes"/>
+      </xs:sequence>
+      <xs:attribute name="nombre"/>
+    </xs:complexType>
+
+    <xs:complexType name="tipoReptiles">
+      <xs:sequence>
+        <xs:element name="reptil" maxOccurs="unbounded" type="reptil"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="reptil" mixed="true">
+      <xs:all>
+        <xs:element name="peso" type="tipoUnidadMedida"/>
+        <xs:element name="longitud" type="tipoUnidadMedida"/>
+        <xs:element name="edad" minOccurs="0" type="tipoUnidadMedida"/>
+      </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="tipoUnidadMedida" mixed="true">
+      <xs:attribute name="unidadMedida">
+        <xs:simpleType>
+          <xs:union memberTypes="TipoTiempo TipoLogitud TipoPeso"></xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+
+      <xs:simpleType name="TipoTiempo">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="dias"/>
+          <xs:enumeration value="semanas"/>
+          <xs:enumeration value="meses"/>
+        </xs:restriction>
+      </xs:simpleType>
+
+      <xs:simpleType name="TipoLogitud">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="mm"/>
+          <xs:enumeration value="cm"/>
+          <xs:enumeration value="m"/>
+        </xs:restriction>
+      </xs:simpleType>
+
+      <xs:simpleType name="TipoPeso">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Kg"/>
+          <xs:enumeration value="Mg"/>
+          <xs:enumeration value="Cg"/>
+        </xs:restriction>
+      </xs:simpleType>
+
+    <!-- 
+
+
+    -->
+
+    <xs:complexType name="typeMamiferos">
+      <xs:sequence>
+        <xs:element name="mamifero" maxOccurs="unbounded" type="caractMamifero"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="caractMamifero">
+      <xs:sequence>
+        <xs:element name="nombre">
+          <xs:complexType>
+            <xs:attribute name="valor"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="raza" type="tipoRaza"/>
+        <xs:element name="descripcion" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="codigo" type="tipoCodigo"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tipoCodigo">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{3}[-][(][\d]{5}[)]"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tipoRaza">
+      <xs:choice>
+        <xs:element name="perro" minOccurs="0"/>
+        <xs:element name="delfin" minOccurs="0"/>
+        <xs:element name="orca" minOccurs="0"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <!-- 
+
+
+    -->
+
+   <xs:complexType name=""></xs:complexType>
+
+</xs:schema>

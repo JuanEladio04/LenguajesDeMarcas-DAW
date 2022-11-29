@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE placasBase SYSTEM "01_ordenadores.dtd">
+<placasBase>
+	<placaBase>
+		<microprocesador>Radeon 787534EU</microprocesador>
+		<memoria>32GB</memoria>
+		<modelo>AMD 25896TXR</modelo>
+		<fabricante><Asus/></fabricante>
+	</placaBase>
+	<placaBase>
+		<microprocesador>Radeon 8552</microprocesador>
+		<memoria>64GB</memoria>
+		<modelo>AMD 25878TXR-Sup</modelo>
+		<fabricante><Intel/></fabricante>
+	</placaBase>
+</placasBase>

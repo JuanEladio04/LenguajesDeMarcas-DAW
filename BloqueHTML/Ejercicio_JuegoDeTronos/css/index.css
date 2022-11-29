@@ -1,0 +1,32 @@
+html, body {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+#banner {
+    margin: auto;
+    text-align: center;
+    width: 700px;
+}
+
+
+.unTercio img {
+    width: 33.33%;
+    display: inline-block;
+}
+
+.unCuarto img {
+    width: 25%;
+    display: inline-block;
+}
+
+.tabla img {
+    border: black solid 1px;
+}
+
+.tabla {
+    margin: 40px;
+}

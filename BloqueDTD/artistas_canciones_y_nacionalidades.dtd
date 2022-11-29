@@ -1,0 +1,19 @@
+﻿<!ELEMENT artistas_canciones_y_nacionalidades (artistas, canciones, nacionalidades)>
+
+<!ELEMENT artistas (artista*)>
+<!ELEMENT artista EMPTY>
+<!ATTLIST artista nombre ID #REQUIRED>
+<!ATTLIST artista fechaNacimiento CDATA #IMPLIED>
+<!ATTLIST artista nacionalidad NMTOKENS #REQUIRED>
+<!ATTLIST artista discografica CDATA #IMPLIED>
+
+<!ELEMENT canciones (cancion*)>
+<!ELEMENT cancion EMPTY>
+<!ATTLIST cancion nombre CDATA #REQUIRED>
+<!ATTLIST cancion duracion CDATA #REQUIRED>
+<!ATTLIST cancion artista IDREF #REQUIRED>
+
+<!ELEMENT nacionalidades (nacionalidad*)>
+<!ELEMENT nacionalidad EMPTY>
+<!ATTLIST nacionalidad codigo NMTOKEN #REQUIRED>
+<!ATTLIST nacionalidad nombre CDATA #REQUIRED>

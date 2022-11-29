@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ofertasBlackFriday" type="tipoBlackFriday"/>
+
+  <xs:complexType name="tipoBlackFriday">
+    <xs:sequence>
+        <xs:element name="articulo" maxOccurs="unbounded" type="tipoArticulo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+
+  <xs:complexType name="tipoArticulo" mixed="true">
+    <xs:all>
+        <xs:element name="fabricante" type="tipoFabricante"/>
+        <xs:element name="oferta" type="tipoOferta"/>
+        <xs:element name="valoraciones" type="tipoValoraciones"/>
+        <xs:element name="preguntas" type="tipoPreguntas"/>
+        <xs:element name="agregadoACestaDeCompra" type="tipoCesta" >
+        </xs:element>
+    </xs:all>
+    <xs:attribute name="codigo"/>
+  </xs:complexType>
+
+
+
+    <xs:complexType name="tipoFabricante">
+        <xs:choice>
+            <xs:element name="canon"/>
+            <xs:element name="epson"/>
+            <xs:element name="samsung"/>
+            <xs:element name="apple"/>
+            <xs:element name="philips"/>
+        </xs:choice>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoOferta" mixed="true">
+        <xs:attribute name="precioHabitual" type="xs:integer"/>
+        <xs:attribute name="descuento" type="tipoPorcentaje"/>
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="tipoPorcentaje">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\d]{1,2}[%]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:complexType name="tipoValoraciones">
+        <xs:sequence>
+            <xs:element name="positiva" type="tipoPost"/>
+            <xs:element name="negativa" type="tipoPost"/>
+            <xs:element name="masVotada" type="tipoPostDerivadoVotada"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoPost">
+        <xs:sequence>
+            <xs:element name="autor" type="unionListas"/>
+            <xs:element name="texto"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoPostDerivadoVotada">
+        <xs:complexContent>
+            <xs:extension base="tipoPost">
+                <xs:sequence>
+                    <xs:element name="fecha" type="tipoFechaCorta"/>
+                </xs:sequence>
+                <xs:attribute name="votosFavorables" type="xs:integer"/>
+                <xs:attribute name="votosDesfavorables" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+
+
+    <xs:simpleType name="tipoFechaCorta">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\d]{2}[/][\d]{2}[/][\d]{4}[' '][\d]{2}[:][\d]{2}[:][\d]{2}[' '][(PM)|(AM)]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:complexType name="tipoMasVotada">
+        <xs:attribute name="votosFavorables" type="xs:integer"/>
+        <xs:attribute name="votosDesfavorables" type="xs:integer"/>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoPreguntas">
+        <xs:sequence>
+            <xs:element name="pregunta" type="tipoPostDerivadoPregunta"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoPostDerivadoPregunta">
+        <xs:complexContent>
+            <xs:extension base="tipoPost">
+                <xs:sequence>
+                    <xs:element name="respuestas" type="tipoRespuesta"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoRespuesta">
+        <xs:sequence>
+            <xs:element name="respuesta" type="tipoComentario"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="tipoComentario" mixed="true">
+        <xs:sequence>
+            <xs:element name="votantesEnPositivo"/>
+            <xs:element name="votantesEnNegativo"/>
+        </xs:sequence>
+        <xs:attribute name="autor" type="unionListas"/>
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="listaNombres">
+        <xs:list itemType="unionListas"></xs:list>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="unionListas">
+        <xs:union memberTypes="listaNombresFemeninos listaNombresMasculinos"></xs:union>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="listaNombresMasculinos">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pedro"/>
+            <xs:enumeration value="Álvaro"/>
+            <xs:enumeration value="Javier"/>
+            <xs:enumeration value="Gonzalo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="listaNombresFemeninos">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Araceli"/>
+            <xs:enumeration value="Lucía"/>
+            <xs:enumeration value="Silvia"/>
+            <xs:enumeration value="Inma"/>
+            <xs:enumeration value="Estela"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="tipoCesta">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[(lunes)|(martes)|(miércoles)|(jueves)|(viernes)|(sábado)|(domingo)]{1}[' '][\d]{1,2}[' '](de){1}[' '][(enero)|(febrero)|(marzo)|(abril)|(mayo)|(junio)|(julio)|(agosto)|(septiembre)|(octubre)|(noviembre)|(diciembre)]{1}[' '][de]{1}[' '][\d]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="tipoValor">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[(Sí)|(No)]{1}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

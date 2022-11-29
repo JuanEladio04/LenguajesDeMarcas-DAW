@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Viaje SYSTEM "ViajesPosiblesaRealizar.dtd">
+
+<Viaje>
+    <Avion>
+        Vuelo Internacional
+    </Avion>
+    <Playa>
+        <Arena/>
+    </Playa>
+    <Piscina>
+        <Adultos nombre = "Carmen">
+            Jovenes
+        </Adultos>
+        <Adultos nombre = "Antonio" rescatadoPor="Paco">
+            Casi se ahoga y ahora es amigo de Paco
+        </Adultos>
+
+        <Socorrista nombre="Paco" amigoDe="Antonio">
+            Ahora, amigo de Antonio
+        </Socorrista>
+    </Piscina>
+    <Fiesta>
+        <Borracho Tipo="BuscaPeleas" Fumador="si"/>
+        <Camareros Tipo="BuenaGente" CoctelesBebidos="3" Fumador="no">
+            Servicial
+        </Camareros>
+    </Fiesta>
+    <OtroPais>
+        <Japon nombre="jpn" color="rojo"/>
+        <USA nombre="USA" color="azul" Tusrista="Paco Antonio">
+            NEW YORK
+        </USA>
+    </OtroPais>
+</Viaje>

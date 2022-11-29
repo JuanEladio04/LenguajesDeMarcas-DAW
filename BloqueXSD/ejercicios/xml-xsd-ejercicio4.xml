@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<universoMarvel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="xml-xsd-ejercicio5.xsd">
+	<personaje bando="de los buenos">Capitán América
+		<traje>
+			<creador>Él mismo</creador>
+			<colores>
+				<color valor="azul"/>
+				<color valor="verde"/>
+			</colores>
+		</traje>
+		<enemigo>Cráneo rojo</enemigo>
+		<enemigo>Ultrón</enemigo>
+		<enemigo>Thanos</enemigo>
+	</personaje>
+	<personaje bando="de los buenos">Cráneo rojo
+		<traje>
+			<creador>Él mismo</creador>
+			<colores>
+				<color valor="negro"/>
+				<color valor="rojo"/>
+			</colores>
+		</traje>
+		<enemigo>Capitán América</enemigo>
+		<enemigo>Winston Churchill</enemigo>
+	</personaje>
+</universoMarvel>

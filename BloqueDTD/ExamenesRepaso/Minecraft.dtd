@@ -1,0 +1,20 @@
+<!ELEMENT Minecraft (UnJugador+, DosJugadores?)>
+<!ELEMENT UnJugador (Mundo?)>
+<!ELEMENT Mundo (Bloque* , ( Agua+ | Lava?))>
+<!ELEMENT Bloque (#PCDATA | Flotante | Mineral)*>
+<!ELEMENT Flotante EMPTY>
+<!ELEMENT Mineral (#PCDATA)>
+<!ELEMENT Agua (Peces?)>
+
+<!ELEMENT DosJugadores (Multijugador+)>
+<!ELEMENT Multijugador EMPTY>
+
+<!ENTITY % caracteristicas "destruible (si | no) 'si'
+                            nombre ID #REQUIRED
+                            pertecece IDREF #IMPLIED">
+
+<!ATTLIST Bloque %caracteristicas;>
+<!ATTLIST Agua %caracteristicas;>
+<!ATTLIST Mineral %caracteristicas;>
+
+<!ATTLIST Minecraft creador CDATA #FIXED "Notch">

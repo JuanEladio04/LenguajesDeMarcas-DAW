@@ -1,0 +1,23 @@
+<!ELEMENT sistemaSolar (Planeta*, Astros+)>
+<!ELEMENT Astros ((asteroide | meteorito)?, nebulosa?, cinturon?)>
+<!ELEMENT meteorito EMPTY>
+<!ELEMENT nebulosa (#PCDATA)>
+<!ELEMENT cinturon (#PCDATA)>
+<!ELEMENT element-name (#PCDATA)>
+
+<!ELEMENT Planeta (#PCDATA | Satelites | Atmosfera)*>
+<!ELEMENT Satelites (#PCDATA)>
+<!ATTLIST Satelites planeta IDREF #REQUIRED>
+<!ELEMENT Atmosfera (#PCDATA)>
+<!ENTITY % color "color (naranja | amarillo | azul | rojo) 'rojo'">
+<!ENTITY % caracteristicas " nombre ID #REQUIRED
+                    posicion CDATA #IMPLIED
+                    habitable (si | no) 'no'
+                    habintes CDATA #FIXED 'terricolas' 
+                    %color;">
+<!ATTLIST Planeta   %caracteristicas;>
+<!ATTLIST Satelites %caracteristicas;>
+
+
+
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="universoMarvel" type="universe"/>
+
+  <xs:complexType name="universe">
+    <xs:sequence>
+      <xs:element name="personaje" maxOccurs="unbounded" type="character"/>
+    </xs:sequence> 
+  </xs:complexType>
+
+  <xs:complexType name="character" mixed="true">
+    <xs:sequence>
+      <xs:element name="traje" type="tipoTraje"/>
+      <xs:element name="enemigo" maxOccurs="unbounded" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="bando" type="tipoBando"/>
+  </xs:complexType>
+
+  <xs:simpleType name="tipoBando">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="de los buenos"/>
+      <xs:enumeration value="de los malos"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+<xs:complexType name="tipoTraje">
+  <xs:sequence>
+    <xs:element name="creador"/>
+    <xs:element name="colores" type="color"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="color">
+  <xs:sequence>
+    <xs:element name="color" maxOccurs="unbounded">
+      <xs:complexType>
+        <xs:attribute name="valor" type="xs:string"/>
+      </xs:complexType>  
+    </xs:element>
+  </xs:sequence>
+</xs:complexType>
+
+</xs:schema>

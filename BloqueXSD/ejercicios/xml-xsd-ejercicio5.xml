@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<usuario id="rafaelCarlosMuñoz@gmail.com" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="xml-xsd-ejercicio6.xsd"> <!-- El valor del usuario debe terminar en la cadena "gmail.com" o "gmail.es" -->
+	<ultimasSesiones>
+		<sesion fecha="2017-11-07" hora="09:30">Expirada</sesion> <!-- El atributo fecha debe tomar una fecha en formato europeo
+																	, el atributo hora debe tomar una hora válida en formato 24 H-->
+		<sesion fecha="2017-11-07" hora="09:45">Expirada</sesion>																	
+		<sesion fecha="2017-11-07" hora="10:25">Activa
+			<dispositivo ip="125.65.3.14" navegador="MSEdge" NAT="no"/> <!-- El atributo ip debe ser una dirección ip más o menos válida
+																		El navegador es texto libre, el atributo NAT será "no/si" -->
+		</sesion>																	
+	</ultimasSesiones>
+	<marcadores>
+		<marcador nombre="Tutorial Java">http://webdidacticarafaelmunoz.appspot.com/java/index-java.jsp</marcador>
+		<!-- El atributo nombre será de texto libre, pero el contenido del elemento marcador debe comenzar por "http://" o "https://" -->
+		<marcador nombre="marca">http://www.marca.com</marcador>
+	</marcadores>
+	<mensajes>
+		<mails>
+			<mail de="carmen@carmen.com"> <!-- El atributo "de" debe tomar un valor de email correcto -->
+				<asunto>Hola, que tal?</asunto>
+				<cuerpo>Pues me alegro mucho de verte</cuerpo>
+			</mail>
+		</mails>
+		<hangout>
+			<mensaje>
+				<asunto>Asunto de Hangout</asunto>
+				<cuerpo>Cuerpo de mensaje de Hangout</cuerpo>
+			</mensaje>
+		</hangout>
+		<!-- Entre los elementos "mail" y "mensaje" debes hacer una derivación de tipos de datos complejos -->
+	</mensajes>
+</usuario>

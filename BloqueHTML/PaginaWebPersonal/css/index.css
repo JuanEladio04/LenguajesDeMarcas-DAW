@@ -1,0 +1,37 @@
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.top_banner {
+    background-color: #4B4B4B;
+    margin: none;
+    text-align: left;
+    border-bottom: 1px solid #FFD700;
+}
+
+.top_banner img {
+    width: 20%;
+    margin: 1%;
+}
+
+.left_banner {
+    background-color: #FFD700;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    margin: none;
+}
+
+.left_banner a {
+    background-color: aqua;
+    display: block;
+    padding: 15px;
+}
+
+#map{
+    display: inline-block;
+    height: 50%;
+    margin: none;
+}

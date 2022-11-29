@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE emails SYSTEM "02_correosElectronicos.dtd">
+<emails>
+	<email>
+		<para>rafa@gmail.com</para>
+		<cc>Juan@gmail.com</cc>
+		<cco>Pablo@gmail.com</cco>
+		<asunto>Holaaaa, qué tal????</asunto>
+		<cuerpo>Me alegro de escribirte.....</cuerpo>
+		<adjunto>
+			<nombre>Nosotros_en_Malaga.jpg</nombre>
+			<mime-type>image/jpeg</mime-type>
+			<longitud>8596KB</longitud>
+		</adjunto>
+	</email>
+</emails>

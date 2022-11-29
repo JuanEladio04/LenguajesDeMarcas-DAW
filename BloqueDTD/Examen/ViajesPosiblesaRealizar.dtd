@@ -1,0 +1,40 @@
+<!ELEMENT Viaje (Avion+, Barco?, Playa?, Piscina+, Fiesta*, OtroPais)>
+
+<!ELEMENT Avion (#PCDATA)>
+<!ELEMENT Playa (Piedras | Arena)*>
+<!ELEMENT Piedras EMPTY>
+<!ELEMENT Arena EMPTY>
+
+<!ELEMENT Piscina (Niños?, Adultos*, (Socorrista | Vigia))*>
+<!ELEMENT Niños EMPTY>
+<!ELEMENT Adultos (#PCDATA)>
+<!ATTLIST Adultos rescatadoPor IDREF #IMPLIED
+                    nombre ID #REQUIRED>
+<!ELEMENT Socorrista (#PCDATA)>
+<!ATTLIST Socorrista nombre  ID #FIXED "Paco"
+                    amigoDe IDREF #REQUIRED>
+
+<!ELEMENT Fiesta (Borracho*, Camareros+)>
+<!ELEMENT Borracho EMPTY>
+<!ELEMENT Camareros (#PCDATA)>
+<!ENTITY % Tipo "Tipo ID #REQUIRED
+                CoctelesBebidos NMTOKEN #IMPLIED
+                Fumador (si | no) 'no'
+                colorCamisa CDATA #IMPLIED">
+<!ATTLIST Borracho %Tipo;>
+<!ATTLIST Camareros %Tipo;>
+
+<!ELEMENT OtroPais (Mexico?, Japon?, USA?)>
+<!ENTITY % caracteristicas "nombre ID #REQUIRED
+                            color (rojo | amarillo | azul) 'azul'
+                            Tusrista  IDREFS #IMPLIED">
+<!ELEMENT Mexico (#PCDATA)>
+<!ATTLIST Mexico %caracteristicas;>
+<!ELEMENT Japon EMPTY>
+<!ATTLIST Japon %caracteristicas;>
+<!ELEMENT USA (#PCDATA)>
+<!ATTLIST USA %caracteristicas;>
+
+
+
+
