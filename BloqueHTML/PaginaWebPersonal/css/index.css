@@ -1,7 +1,11 @@
 
+/*Menu*/
+
+
 body {
     padding: 0px;
     margin: 0px;
+    font-family: 'Cinzel', serif;
 }
 
 .top_banner {
@@ -12,26 +16,122 @@ body {
 }
 
 .top_banner img {
-    width: 20%;
+    width: 15%;
     margin: 1%;
 }
 
 .left_banner {
-    background-color: #FFD700;
+    background-color: #4B4B4B;
     display: inline-block;
-    width: 30%;
+    width: 20%;
     height: 100%;
     margin: none;
+    border-right: 1px solid #FFD700;
+    border-bottom: 1px solid #FFD700;
+    margin: none;
+    float: left;
 }
 
 .left_banner a {
-    background-color: aqua;
     display: block;
-    padding: 15px;
+    text-decoration: none;
+    color: #FFD700;
+    text-align: center;
+    padding: 1em;
+    font-size: 1.2em;
 }
 
-#map{
+.left_banner a:hover {
+    color: #FFD700;
+    background-color: #2e2e2e;
+}
+
+
+/*Option photos*/
+
+
+#targaryenOption {
+    background-image: url(../img/logoTargaryen.png);
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+#starkOption {
+    background-image: url(../img/logoStark.png);
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: left;
+
+}
+
+#lannisterOption {
+    background-image: url(../img/logoLannister.png);
+    background-size: 3em;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#baratheonOption {
+    background-image: url(../img/logoBaratheon.png);
+    background-size: 6em;
+    background-repeat: no-repeat;
+    background-position: left;
+
+}
+
+#greyjoyOption {
+    background-image: url(../img/logoGreyjoy.png);
+    background-size: 4em;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+
+
+/*Content*/
+
+
+body{
+    background-image: url(../img/Westeros_map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.informationBlock {
     display: inline-block;
-    height: 50%;
-    margin: none;
+    background-color: rgb(54, 54, 54);
+    margin: 5%;
+    color: white;
+    border: 1px yellow solid;
+    padding: 3%;
+    text-align: justify;
+}
+.informationBlock #pargraphWithPhoto {
+    display: inline;
+    width: 50%;
+    margin: 2%;
+}
+
+.informationBlock .noBorder{ 
+    float: right;
+    display: inline;
+    width: 40%;
+    margin: 1em;
+}
+
+.informationBlock .Border {
+    float: right;
+    display: inline-block;
+    width: 40%;
+    margin: 1em;
+    border: 1px yellow solid;
+    height: 100%;
+}
+
+.content {
+    display: inline-block;
+    width: 40%;
+    float: right;
 }
