@@ -108,6 +108,12 @@ body{
     padding: 3%;
     text-align: justify;
 }
+
+.informationBlock a{
+    color: white;
+    
+}
+
 .informationBlock #pargraphWithPhoto {
     display: inline;
     width: 50%;
@@ -134,4 +140,8 @@ body{
     display: inline-block;
     width: 40%;
     float: right;
+}
+
+span .bold {
+    border-bottom: solid 1px white;
 }
