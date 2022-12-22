@@ -114,20 +114,20 @@ body{
     
 }
 
-.informationBlock #pargraphWithPhoto {
+#pargraphWithPhoto {
     display: inline;
     width: 50%;
     margin: 2%;
-}
 
-.informationBlock .noBorder{ 
+}
+.noBorder{ 
     float: right;
     display: inline;
     width: 40%;
     margin: 1em;
 }
 
-.informationBlock .Border {
+.Border {
     float: right;
     display: inline-block;
     width: 40%;
@@ -144,4 +144,15 @@ body{
 
 span .bold {
     border-bottom: solid 1px white;
+}
+
+.table {
+    border: #FFD700 solid 1px;
+    background-color: rgb(54, 54, 54);
+    table-layout: fixed;
+}
+
+.table td {
+    border: #FFD700 solid 1px;
+    color: white;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="main.css" rel="stylesheet" type="text/css" media="all" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+    .flex-container {
+        display: flex;
+        height: 300px;
+        border: red 4px solid;
+        color: white;
+        font-size: 40px;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    .flex-container > div {
+        width: 50%;
+        text-align: center;
+        margin: 0px;
+    }
+</style>
+<body>
+    <div class="flex-container">
+        <div style="background-color: cyan; height: 25%;">Uno &#129409</div>
+        <div style="background-color: rgb(85, 85, 245); height: 25%;">Dos &#128540</div>
+        <div style="background-color: purple; height: 40%;">Tres &#128564</div>  
+        <div style="background-color: rgb(1, 0, 63); height: 10%;">Cuatro &#9969</div>
+        <div style="background-color: yellow; height: 45%;">Cinco &#127829</div>
+        <div style="background-color: orange; height: 55%;">Seis &#127808</div>  
+      </div>
+      
+</body>
+</html>
