@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/*Tools*/
+.standart_banner, .left_banner, .top_banner {
+  background-color: #4B4B4B;
+  margin: none;
+  border-bottom: 1px solid #FFD700;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Cinzel", serif;
+  background-image: url(../img/Westeros_map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Menú superior*/
+.top_banner {
+  text-align: left;
+}
+.top_banner img {
+  width: 15%;
+  margin: 1%;
+}
+
+/*Menu vertical*/
+.left_banner {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #FFD700;
+  float: left;
+}
+.left_banner a {
+  display: block;
+  text-decoration: none;
+  color: #FFD700;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+.left_banner a:hover {
+  color: #FFD700;
+  background-color: #2e2e2e;
+}
+
+/*Opciones casas*/
+#targaryenOption {
+  background-image: url("../img/logoTargaryen.png");
+  background-size: 4em;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#starkOption {
+  background-image: url("../img/logoStark.png");
+  background-size: 4em;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#lannisterOption {
+  background-image: url("../img/logoLannister.png");
+  background-size: 3em;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#baratheonOption {
+  background-image: url("../img/logoBaratheon.png");
+  background-size: 6em;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#greyjoyOption {
+  background-image: url("../img/logoGreyjoy.png");
+  background-size: 4em;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/*Contenido de la pagina*/
+.informationBlock {
+  display: inline-block;
+  background-color: rgb(54, 54, 54);
+  margin: 5%;
+  color: white;
+  border: 1px yellow solid;
+  padding: 3%;
+  text-align: justify;
+}
+.informationBlock a {
+  color: white;
+}
+
+#pargraphWithPhoto {
+  display: inline;
+  width: 50%;
+  margin: 2%;
+}
+
+/*# sourceMappingURL=index.css.map */

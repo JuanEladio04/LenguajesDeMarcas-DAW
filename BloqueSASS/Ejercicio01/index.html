@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d9c51a1842.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/d9c51a1842.js" crossorigin="anonymous"></script>
+    <title>Formulario</title>
+</head>
+
+<body class="h-100 container-fluid">
+    <div class="container-fluid row bg-light h-100">
+        <div class="col-1"></div>
+
+        <div class="col-10">
+            <!--Cabezera-->
+            <div class="row text-center aling-center col-12 m-3">
+                <img src="img/bootstrap-logo-vector.svg" alt="bootstrap logo" class="col-1 container-fluid p-3">
+                <p class="h2">
+                    Checkout form
+                </p>
+                <p class="text-secondary">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, voluptates eos voluptatibus
+                    consequatur aut numquam vitae, velit, possimus sit porro cum mollitia minima doloribus hic magnam
+                    nobis voluptas odit facilis vel voluptatum quidem voluptate. Voluptatem quam, possimus dolor nisi
+                    exercitationem nesciunt? Provident dolore quos quaerat hic dolor cumque eum laborum.
+                </p>
+            </div>
+
+            <!--Cuerpo-->
+            <div class="container-fluid row m-5 col-12">
+                <!--Formulario-->
+                <div class="col-md-8 order-2 order-md-1">
+                    <h2 class="col-12 titles">
+                        Billing address
+                    </h2>
+                    <form action="">
+                        <div class="form-group row container">
+                            <div class="col-md-6 col-12">
+                                <label for="FirstName" class="fw-bold">First name</label>
+                                <input type="text" class="form-control" id="FirstName">
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <label for="LastName" class="fw-bold">Last name</label>
+                                <input type="text" class="form-control col-md-6" id="LastName">
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <label for="Username" class="fw-bold">Username</label>
+                                <label class="sr-only" for="Username" clas>Username</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group">
+                                        <span class="input-group-text rounded-left">@</span>
+                                        <input type="text" class="form-control" id="Username" placeholder="Username">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-12 mt-3">
+                                <label for="emailBox" class="fw-bold">Email <span class="text-secondary">(Optional)</span></label>
+                                <input type="email" class="form-control" id="emailBox"
+                                    aria-describedby="emailHelp" placeholder="you@example.com">
+                            </div>
+
+                            <div class="col-md-12 mt-3">
+                                <label for="Address" class="fw-bold">Address</label>
+                                <input type="text" class="form-control" id="Address" placeholder="1234 Main St">
+                            </div>
+
+                            <div class="col-md-12 mt-3">
+                                <label for="Address2" class="fw-bold">Address 2 <span
+                                        class="text-secondary">(Optional)</span></label>
+                                <input type="text" class="form-control" id="Address" placeholder="Apartment or suite">
+                            </div>
+
+                            <!--Tres campos-->
+                            <div class="row col-12 container-fluid">
+                                <div class="col-md-5 mt-2">
+                                    <h6 class="fw-bold">Country</h6>
+                                    <select class="form-select">
+                                        <option>España</option>
+                                        <option>Polonia</option>
+                                        <option>Italia</option>
+                                        <option>💩Francia💩</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4 mt-2">
+                                    <h6 class="fw-bold">State</h6>
+                                    <select class="form-select">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <h6 class="fw-bold">Zip</h6>
+                                    <input type="email" class="form-control" id="email" placeholder="" name="email">
+                                </div>
+                            </div>
+
+                            <div class="col-12 border-top border-bottom mt-2 p-1 pt-3 pb-3">
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Shipping address is the same as my billing address
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2 mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Save this information for next time
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 border-bottom mt-2 p-1 pt-3 pb-4">
+                                <h4 class="col-0 mb-4 titles">
+                                    Payment
+                                </h4>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod"
+                                        value="option2">
+                                    <label class="form-check-label" for="paymentMethod">
+                                        Credit card
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod"
+                                        value="option2">
+                                    <label class="form-check-label" for="paymentMethod">
+                                        Debit card
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod"
+                                        value="option2">
+                                    <label class="form-check-label" for="paymentMethod">
+                                        Paypal
+                                    </label>
+                                </div>
+
+                                <div class="container-fluid row">
+                                    <div class="col-md-6 col-12">
+                                        <label for="cardName" class="fw-bold">Name on card</label>
+                                        <input type="text" class="form-control" id="cardName">
+                                        <label for="cardName" class="text-secondary">Full name as displayedmon
+                                            card</label>
+                                    </div>
+
+                                    <div class="col-md-6 col-12">
+                                        <label for="cardNum" class="fw-bold">Credit card number</label>
+                                        <input type="text" class="form-control" id="cardNum">
+                                    </div>
+
+                                    <div class="col-md-3 col-12 mt-2">
+                                        <label for="ExpirationDate" class="fw-bold">Expiration</label>
+                                        <input type="text" class="form-control" id="ExpirationDate">
+                                    </div>
+
+                                    <div class="col-md-3 col-12 mt-2">
+                                        <label for="cvv" class="fw-bold">CVV</label>
+                                        <input type="text" class="form-control" id="cvv">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="button" class="btn btn-lg btn-block col-12 finalButton">Continue to
+                                    checkout</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Cesta de la compra-->
+
+                <div class="col-md-4 col-12 order-1 order-md-2">
+                    <div class="row">
+                        <div class="col-12 row">
+                            <h4 id="myCart" class="col-10">Your Cart</h4>
+                            <p class="border rounded-circle col-2 text-center fw-bold p-2 text-white bg-secondary">
+                                3
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <i class="fa-sharp fa-solid fa-circle-3"></i>
+                        </div>
+                    </div>
+                    <ol class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Product Name</div>
+                                Brief description
+                            </div>
+                            <span class="badge text-secondary rounded-pill">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Second Product</div>
+                                Brief description
+                            </div>
+                            <span class="badge text-secondary rounded-pill">$8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Third item</div>
+                                Brief description
+                            </div>
+                            <span class="badge text-secondary rounded-pill">$5</span>
+                        </li>
+                        <li class=" promoCode list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto ">
+                                <div class="fw-bold text-success">Promo code</div>
+                                <span class="text-success">EXAMPLECODE</span>
+                            </div>
+                            <span class="badge text-success rounded-pill">$-5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Total (USD)</div>
+                            </div>
+                            <span class="badge text-secondary rounded-pill">$20</span>
+                        </li>
+                    </ol>
+                    <div class="input-group mb-3 mt-3">
+                        <input type="text" class="form-control" placeholder="Promo Code">
+                        <button class="btn btn-secondary" type="button">Redeem</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-1"></div>
+
+        <!--Pie de pagina-->
+        <div class="text-center p-5 bg-light">
+            <p class="text-secondary fw-bold">
+                <i class="fa-regular fa-copyright"></i>                2017 - 2018 Company Name
+            </p>
+            <a href="#" class="text-decoration-none col-1 m-1">
+                Privacy
+            </a>
+            <a href="#" class="text-decoration-none col-1 m-1">
+                Terms
+            </a>
+            <a href="#" class="text-decoration-none col-1 m-1">
+                Suport
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+@import 'colors.scss';
+
+@mixin titles {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#myCart {
+    @include titles();
+    color: $PROMO_CODE;
+}
+
+.promoCode {
+    background-color: $PROMO_CODE;
+}
+
+.finalButtom {
+    background-color: $FINAL_BUTTON;
+}

@@ -1,0 +1,13 @@
+/*Tools*/
+.standart_banner {
+    background-color: #4B4B4B;
+    margin: none;
+    border-bottom: 1px solid #FFD700;
+}
+
+@mixin houseOption($url, $direction, $bgSize){
+    background-image: url($url);
+    background-size: $bgSize;
+    background-repeat: no-repeat;
+    background-position: $direction;
+}

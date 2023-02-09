@@ -1,0 +1,27 @@
+@import "reset.scss";
+@import "colors.scss";
+
+
+@mixin ejemplo ($color, $size){
+    background-color: $color;
+    height: $size;
+    width: $size;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+      @include ejemplo(blue, 100px)
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+
+  }

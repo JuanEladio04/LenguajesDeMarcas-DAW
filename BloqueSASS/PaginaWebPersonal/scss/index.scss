@@ -1,0 +1,89 @@
+@import 'tools.scss';
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cinzel', serif;
+    background-image: url(../img/Westeros_map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Menú superior*/
+.top_banner {
+    text-align: left;
+    @extend .standart_banner;
+
+    img {
+        width: 15%;
+        margin: 1%;
+    }
+}
+
+/*Menu vertical*/
+.left_banner {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #FFD700;
+    float: left;
+    @extend .standart_banner;
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: #FFD700;
+        text-align: center;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    a:hover {
+        color: #FFD700;
+        background-color: #2e2e2e;
+    }
+}
+
+/*Opciones casas*/
+#targaryenOption {
+    @include houseOption('../img/logoTargaryen.png', right, 4em)
+}
+
+#starkOption {
+    @include houseOption('../img/logoStark.png', left, 4em)
+}
+
+#lannisterOption {
+    @include houseOption('../img/logoLannister.png', right, 3em)
+}
+
+#baratheonOption {
+    @include houseOption('../img/logoBaratheon.png', left, 6em)
+}
+
+#greyjoyOption {
+    @include houseOption('../img/logoGreyjoy.png', right, 4em)
+}
+
+/*Contenido de la pagina*/
+
+.informationBlock {
+    display: inline-block;
+    background-color: rgb(54, 54, 54);
+    margin: 5%;
+    color: white;
+    border: 1px yellow solid;
+    padding: 3%;
+    text-align: justify;
+
+    a {
+        color: white;
+    }
+}
+
+
+#pargraphWithPhoto {
+    display: inline;
+    width: 50%;
+    margin: 2%;
+}
