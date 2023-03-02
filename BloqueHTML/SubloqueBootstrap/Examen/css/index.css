@@ -1,0 +1,29 @@
+.blue_button {
+  background-color: #00B2FF;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+.darkGrey_bg {
+  background-color: #868686;
+}
+
+.personalcard {
+  font-weight: bold;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.bigtittle {
+  font-weight: bold;
+  font-size: 2em;
+  font-size: 3em;
+}
+
+.hover:hover {
+  color: white !important;
+}
+
+/*# sourceMappingURL=index.css.map */

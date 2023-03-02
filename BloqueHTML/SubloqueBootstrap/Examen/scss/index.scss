@@ -1,0 +1,32 @@
+@import 'colors.scss';
+
+@mixin titles {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.blue_button {
+    background-color: $BUTTONS_BLUE;
+}
+
+body {
+    background-color: $WHITE;
+}
+
+.darkGrey_bg {
+    background-color: $DARK_GREY;
+}
+
+.personalcard {
+    @include titles();
+    font-weight: 700;
+}
+
+.bigtittle {
+    @include titles();
+    font-size: 3em;
+}
+
+.hover:hover { 
+    color: white;
+} 
