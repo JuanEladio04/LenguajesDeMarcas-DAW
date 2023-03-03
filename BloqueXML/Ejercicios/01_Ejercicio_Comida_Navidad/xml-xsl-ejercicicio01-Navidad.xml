@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xml-xsl-ejercicicio01-Navidad.xsl"?>
+
+<navidad>
+	<almuerzo>
+		<primerPlato>Patatas bravas</primerPlato>
+		<segundoPlato>Entrecot de ternera 1ª</segundoPlato>
+		<postre>Danonino</postre>
+		<bebida>Licor de hierbas</bebida>
+		<sobremesa>
+			<primeraCopa>Vodka-naranja</primeraCopa>
+			<segundaCopa>Dyc-pepsi</segundaCopa>
+			<terceraCopa>Ginebra</terceraCopa>
+		</sobremesa>
+	</almuerzo>
+</navidad>

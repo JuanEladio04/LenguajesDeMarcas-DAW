@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="xml-xsd-ejercicio2.xsl"?>
+<ordenadores>
+	<ordenador>
+		<procesador generacion="séptima">Intel I7</procesador>
+		<RAM>
+			<tipo>DDR3</tipo>
+			<capacidad>16GB</capacidad>
+		</RAM>
+		<ROM>
+			<tipo>Tipo1</tipo>
+			<capacidad>128MB</capacidad>
+		</ROM>
+		<HDD>
+			<tipo>SSD</tipo>
+			<capacidad>2TB</capacidad>
+		</HDD>
+		<transporte>
+			<localidad fechaSalida="01/01/2019">Madrid</localidad>
+			<localidad fechaSalida="05/01/2019">Jaén</localidad>
+			<localidad fechaSalida="06/01/2019">Lucena</localidad>
+		</transporte>
+	</ordenador>
+	<ordenador>
+		<procesador generacion="sexta">Intel I5</procesador>
+		<RAM>
+			<tipo>DDR2</tipo>
+			<capacidad>8GB</capacidad>
+		</RAM>
+		<ROM>
+			<tipo>Tipo3</tipo>
+			<capacidad>256MB</capacidad>
+		</ROM>
+		<HDD>
+			<tipo>Mecánico</tipo>
+			<capacidad>4TB</capacidad>
+		</HDD>
+		
+		<transporte>
+			<localidad fechaSalida="01/12/2018">Madrid</localidad>
+			<localidad fechaSalida="05/12/2018">Pontevedra</localidad>
+			<localidad fechaSalida="06/12/2018">A Chamusca</localidad>
+		</transporte>
+	</ordenador>
+</ordenadores>
