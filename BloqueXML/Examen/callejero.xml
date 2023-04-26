@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet href="solucion.xsl" type="text/xsl"?>
+<callejero barrio="Centro" ciudad="Lucena" cod_postal="14900" provincia="Córdoba">
+    <imagen>images/callejero.png</imagen>
+    <callejero>
+        <calle nombre="Juan Valera" anexas="Plaza de España - Julio Romero de Torres"/>
+        <calle nombre="Alta y baja" anexas="Plaza de España - Las tiendas"/>
+        <calle nombre="San Miguel" anexas="Plaza de España - Plaza Nueva"/>
+    </callejero>
+    <monumentos>
+        <monumento imagen="monumento1" nombre="Ayuntamiento" calle="Juan Valera">
+            <coordX>2</coordX>
+            <coordY>1</coordY>
+        </monumento>
+        <monumento imagen="monumento2" nombre="Castillo" calle="Alta y baja">
+            <coordX>4</coordX>
+            <coordY>5</coordY>
+        </monumento>
+        <monumento imagen="monumento3" nombre="San Mateo" calle="San Miguel">
+            <coordX>2</coordX>
+            <coordY>4</coordY>
+        </monumento>
+    </monumentos>
+    <patrocinadores>
+        <Patrocinador nombre="Joyería Medallón">
+            <imagen id="patrocinador1"/>
+            <direccion>Plaza Nueva, 6</direccion>
+        </Patrocinador>
+        <Patrocinador nombre="Zapatería Zapatón">
+            <imagen id="patrocinador2"/>
+            <direccion>Plaza Alta y baja, 10</direccion>
+        </Patrocinador>
+        <Patrocinador nombre="Supermercado Superbarato">
+            <imagen id="patrocinador3"/>
+            <direccion>Juan Valera, 13</direccion>
+        </Patrocinador>
+    </patrocinadores>
+    <Imagenes>
+        <imagen id="monumento1">images/ayuntamiento.jpg</imagen>
+        <imagen id="monumento2">images/castillo.jpg</imagen>
+        <imagen id="monumento3">images/sanMateo.jpg</imagen>
+        <imagen id="patrocinador1">images/joyeria.jpg</imagen>
+        <imagen id="patrocinador2">images/zapateria.jpg</imagen>
+        <imagen id="patrocinador3">images/supermercado.jpg</imagen>
+    </Imagenes>
+</callejero>

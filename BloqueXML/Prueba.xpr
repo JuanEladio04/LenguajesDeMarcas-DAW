@@ -5,7 +5,7 @@
         <options/>
     </meta>
     <projectTree name="Prueba.xpr">
-        <folder path="."/>
-        <folder path="../../../git/LMSGI_2022-23/Unidad_05_XSL/"/>
+        <folder path="../"/>
+        <folder path="../../../git/LMSGI_2022-23/"/>
     </projectTree>
 </project>
