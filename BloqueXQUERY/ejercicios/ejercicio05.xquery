@@ -1,0 +1,2 @@
+avg(//superheroe/@nivel)
+

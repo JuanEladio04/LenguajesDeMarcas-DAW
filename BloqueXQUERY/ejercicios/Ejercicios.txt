@@ -1,0 +1,23 @@
+Sobre el fichero xml-xsl-ejercicio12.xml del tema 5, realiza las siguientes consultas con xquery. Cada una de las consultas
+debe realizarse sobre un fichero "xquery" diferente. Finalmente debes guardar el fichero xml y los 7 ficheros xquery en una 
+única carpeta, comprimirla y enviármela por mail para su corrección.
+
+1.- Obtén aquellos superhéroes cuyo nombre termine en "a".
+2.- Utiliza la función "contains" de XQuery para encontrar aquellos superheroes que tengan un poder
+relacionado con la "fuerza".
+3.- Obtén aquellos superhéroes que tengan algún poder relacionado con la "fuerza" y sean amigos de 
+"Iron Man".
+4.- Realiza la consulta 3 otra vez, pero evita que las mayúsculas y minúsculas sean un problema, usando
+la función lower-case o upper-case
+5.- Utiliza la función "avg" de XQuery para obtener la media del atributo "nivel" de todos los
+superhéroes.
+6.- Realiza una conversión del formato XML del fichero, de forma que cada superheroe
+muestre el valor de sus atributos a través de elementos hijos. Por ejemplo:
+	<superheroe>
+		<nombre>Thor</nombre>
+		<poderes>Martillo mágico, Dios, Fuerza</poderes>
+		<amigos>Iron Man y Hulk</amigos>
+		<nivel>7</nivel>
+	</superheroe>
+7.- Realiza un ejercicio muy parecido al anterior (6) pero consigue que la conversión se haga a un 
+formato HTML, en el que para cada superheroe aparezca una tabla.
